@@ -22,7 +22,7 @@ var LogStreamsManager = function(options) {
   };
 
   var auth0RestClient = new Auth0RestClient(
-    options.baseUrl + '/logs-streams/:id ',
+    options.baseUrl + '/log-streams/:id ',
     clientOptions,
     options.tokenProvider
   );
