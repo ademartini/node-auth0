@@ -23,6 +23,7 @@ var TenantManager = require('./TenantManager');
 var JobsManager = require('./JobsManager');
 var TicketsManager = require('./TicketsManager');
 var LogsManager = require('./LogsManager');
+var LogStreamsManager = require('./LogStreamsManager');
 var ResourceServersManager = require('./ResourceServersManager');
 var ManagementTokenProvider = require('./ManagementTokenProvider');
 var RulesConfigsManager = require('./RulesConfigsManager');
@@ -282,6 +283,7 @@ var ManagementClient = function(options) {
    */
   this.logs = new LogsManager(managerOptions);
 
+  this.logStreams = new LogStreamsManager(managerOptions);
   /**
    * Simple abstraction for performing CRUD operations on the
    * resource servers endpoint.
